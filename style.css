@@ -9,14 +9,17 @@
 
 .d1 {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+
     padding: 20px;
+
     background-image:
         linear-gradient(
             rgba(3, 10, 25, 0.85),
             rgba(3, 10, 25, 0.92)
         ),
         url("assets/images/frontbg.jpg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,6 +48,7 @@ nav {
     box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
     position: fixed;
     width: 90%;
+
 }
 
 
@@ -82,8 +86,9 @@ li:hover a {
 
 .maincontent {
     width: 90%;
-    height: 450px;
-    margin:auto;
+    min-height: 500px;
+    margin: auto;
+    padding-top: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -127,6 +132,7 @@ li:hover a {
     margin-top: 30px;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 
@@ -148,7 +154,8 @@ li:hover a {
 
 .btn:hover {
     color: white;
-    transform: translateY(8px);
+    transform: translateY(-8px);
+
     box-shadow:
         0 0 15px #00e5ff,
         0 0 25px #0066ff;
@@ -165,9 +172,9 @@ li:hover a {
 
 .content2 {
     width: 35%;
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: slideright 1.5s ease;
 }
 
@@ -181,6 +188,7 @@ li:hover a {
     background: rgba(10, 25, 40, 0.85);
     border: 1px solid #00e5ff;
     border-radius: 15px;
+
     box-shadow:
         0 0 15px rgba(0, 229, 255, 0.4),
         inset 0 0 15px rgba(0, 229, 255, 0.1);
@@ -205,7 +213,7 @@ li:hover a {
 
 .info {
     width: 90%;
-    margin: 50px;
+    margin: 50px auto;
     display: flex;
     justify-content: space-between;
     gap: 25px;
@@ -213,6 +221,7 @@ li:hover a {
 
 
 .card {
+    width: 33%;
     background: rgba(8, 20, 35, 0.90);
     border: 1px solid #164b66;
     border-radius: 10px;
@@ -239,9 +248,7 @@ li:hover a {
 
 .card:hover {
     transform: translateY(-10px);
-
     border-color: #00e5ff;
-
     box-shadow:
         0 0 15px #00e5ff,
         0 0 30px rgba(0, 102, 255, 0.4);
@@ -324,13 +331,11 @@ li:hover a {
 
     from {
         opacity: 0;
-
         transform: translateY(40px);
     }
 
     to {
         opacity: 1;
-
         transform: translateY(0);
     }
 
@@ -341,24 +346,56 @@ li:hover a {
 
 @media screen and (max-width: 768px) {
 
+
+    /* heading */
+
+    h1 {
+        font-size: 30px;
+        margin-top: 60px;
+    }
+
+
+    /* navigation */
+
+    nav {
+        top: 10px;
+        left: 5%;
+        width: 90%;
+    }
+
+
     ul {
         justify-content: center;
         flex-wrap: wrap;
-        height:100%;
+        height: auto;
+        padding: 8px;
     }
 
 
     li {
         margin: 5px;
+        padding: 5px;
     }
 
+
+    li a {
+        font-size: 14px;
+    }
+
+
+    /* main content */
 
     .maincontent {
+        width: 100%;
+        min-height: auto;
         flex-direction: column;
         text-align: center;
-        padding: 40px 0;
+        padding-top: 100px;
+        padding-bottom: 50px;
     }
 
+
+    /* left content */
 
     .content1 {
         width: 100%;
@@ -370,10 +407,18 @@ li:hover a {
     }
 
 
-    .content1 p {
-        width: 100%;
+    .content1 h3 {
+        font-size: 23px;
     }
 
+
+    .content1 p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+
+    /* buttons */
 
     .buttons {
         justify-content: center;
@@ -381,14 +426,32 @@ li:hover a {
     }
 
 
+    /* right content */
+
     .content2 {
         width: 100%;
         margin-top: 40px;
     }
 
 
+    .box {
+        width: 280px;
+        padding: 25px;
+    }
+
+
+    /* cards */
+
     .info {
+        width: 90%;
+        margin: 30px auto;
         flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .card {
+        width: 100%;
     }
 
 }
