@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield - Threats</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* main container */
+
+.d1 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-image:
+        linear-gradient(
+            rgba(3, 10, 25, 0.88),
+            rgba(3, 10, 25, 0.95)
+        ),
+        url("assets/images/frontbg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* heading */
+
+h1 {
+    text-align: center;
+    color: #00e5ff;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #00e5ff;
+    animation: heading 1.5s ease;
+}
+
+
+/* navigation */
+
+nav {
+    margin-top: 15px;
+    background-color: rgba(20, 30, 45, 0.90);
+    border: 1px solid #164b66;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+    position: fixed;
+    top: 20px;
+    left: 5%;
+    width: 90%;
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 55px;
+    padding: 10px;
+}
+
+
+li {
+    margin: 10px;
+    padding: 8px;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+li:hover a {
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+
+/* introduction */
+
+.content {
+    width: 80%; 
+    margin: auto;
+    padding-top: 120px;
+    text-align: center;
+    animation: slide 1.5s ease;
+}
+
+
+.content h2 {
+    color: white;
+    font-sze: 35px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+
+.content p {
+    color: #d5e5ee;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* threats cards */
+
+.threats {
+    width: 90%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    padding: 30px;
+    background: rgba(8, 20, 35, 0.90);
+    border: 1px solid #164b66;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
+    transition: 0.4s;
+    animation: cardshow 1.5s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #00e5ff;
+    box-shadow:
+        0 0 15px #00e5ff,
+        0 0 25px rgba(0, 102, 255, 0.4);
+}
+
+
+.card h3 {
+    color: #00e5ff;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+
+.card p {
+    color: #c4d5df;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.card h4 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+
+/* bottom section */
+
+.bottom {
+    width: 80%;
+    margin: 80px auto;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #164b66;
+    border-radius: 10px;
+    background: rgba(8, 20, 35, 0.8);
+}
+
+
+.bottom h2 {
+    color: #00e5ff;
+    margin-bottom: 15px;
+}
+
+
+.bottom p {
+    color: #c4d5df;
+    line-height: 1.6;
+}
+
+
+/* heading animation */
+
+@keyframes heading {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* content animation */
+
+@keyframes slide {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* card animation */
+
+@keyframes cardshow {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* responsive design */
+
+@media screen and (max-width: 768px) {
+
+
+    h1 {
+        font-size: 30px;
+        margin-top: 60px;
+    }
+
+
+    nav {
+        top: 10px;
+        left: 5%;
+        width: 90%;
+    }
+
+
+    ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+
+    li {
+        margin: 5px;
+        padding: 5px;
+    }
+
+
+    li a {
+        font-size: 14px;
+    }
+
+
+    .content {
+        width: 100%;
+        padding-top: 100px;
+    }
+
+
+    .content h2 {
+        font-size: 28px;
+    }
+
+
+    .content p {
+        font-size: 16px;
+    }
+
+
+   .threats {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+    .card {
+        width: 100%;
+    }
+
+
+    .bottom {
+        width: 90%;
+        padding: 25px;
+    }
+
+}
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="d1">
+
+        <h1>Common Cyber Threats</h1>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="threats.html">Threats</a>
+                </li>
+
+                <li>
+                    <a href="tips.html">Security Tips</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div class="content">
+
+            <h2>Know the Threats</h2>
+
+            <p>
+                Cyber threats are harmful activities that can
+                affect computers, networks and personal information.
+                Understanding these threats can help us stay safe online.
+            </p>
+
+        </div>
+
+
+        <div class="threats">
+
+
+            <div class="card">
+
+                <h3>Phishing</h3>
+
+                <p>
+                    Phishing is a cyber attack where attackers
+                    use fake emails, messages or websites to
+                    trick users into sharing sensitive information.
+                </p>
+
+                <h4>How to Stay Safe</h4>
+
+                <p>
+                    Check the sender, avoid suspicious links and
+                    never share passwords through unknown websites.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Malware</h3>
+
+                <p>
+                    Malware is malicious software designed to
+                    damage a computer, steal information or
+                    gain unauthorized access.
+                </p>
+
+                <h4>How to Stay Safe</h4>
+
+                <p>
+                    Install trusted software and keep your
+                    operating system and antivirus updated.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3> Password Attack</h3>
+
+                <p>
+                    Attackers may try to guess or steal passwords
+                    to gain unauthorized access to online accounts.
+                </p>
+
+                <h4>How to Stay Safe</h4>
+
+                <p>
+                    Use strong and unique passwords and enable
+                    two-factor authentication whenever possible.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Ransomware</h3>
+
+                <p>
+                    Ransomware is malware that can encrypt files
+                    and prevent users from accessing their data.
+                </p>
+
+                <h4>How to Stay Safe</h4>
+
+                <p>
+                    Keep regular backups and avoid downloading
+                    files from unknown sources.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Identity Theft</h3>
+
+                <p>
+                    Identity theft happens when someone uses
+                    another person's personal information without
+                    permission.
+                </p>
+
+                <h4>How to Stay Safe</h4>
+
+                <p>
+                    Protect personal information and avoid sharing
+                    sensitive details on suspicious websites.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>DDoS Attack</h3>
+
+                <p>
+                    A DDoS attack attempts to make a website or
+                    online service unavailable by sending a large
+                    amount of traffic to it.
+                </p>
+
+                <h4>How to Stay Safe</h4>
+
+                <p>
+                    Organizations can use traffic monitoring and
+                    security services to detect unusual activity.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="bottom">
+
+            <h2>Stay Aware. Stay Secure.</h2>
+
+            <p>
+                Learning about cyber threats is the first step
+                towards protecting yourself in the digital world.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
