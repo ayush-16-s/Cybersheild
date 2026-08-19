@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CyberShield - Security Tips</title>
+    
+    <style>
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* main container */
+
+.d1 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-image:
+        linear-gradient(
+            rgba(3, 10, 25, 0.88),
+            rgba(3, 10, 25, 0.95)
+        ),
+        url("assets/images/frontbg.jpg");
+
+    background-size: cover;
+    background-position: center;
+  
+}
+
+
+/* heading */
+
+h1 {
+    text-align: center;
+    color: #00e5ff;
+    font-size: 40px;
+    margin-top: 100px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #00e5ff;
+    animation: heading 1.5s ease;
+}
+
+
+/* navigation */
+
+nav {
+    margin-top: 15px;
+    background-color: rgba(20, 30, 45, 0.90);
+    border: 1px solid #164b66;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+    position: fixed;
+    top: 20px;
+    left: 5%;
+    width: 90%;
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 55px;
+    padding: 10px;
+}
+
+
+li {
+    margin: 10px;
+    padding: 8px;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+li:hover a {
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+
+/* introduction */
+
+.content {
+    width: 80%;
+    margin: auto;
+    padding-top: 120px;
+    text-align: center;
+    animation: slide 1.5s ease;
+}
+
+
+.content h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+
+.content p {
+    color: #d5e5ee;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* security tips */
+
+.tips {
+    width: 90%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* cards */
+
+.card {
+    width: 31%;
+    margin-bottom: 25px;
+    padding: 30px;
+    background: rgba(8, 20, 35, 0.90);
+    border: 1px solid #164b66;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
+    transition: 0.4s;
+    animation: cardshow 1.5s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #00e5ff;
+    box-shadow:
+        0 0 15px #00e5ff,
+        0 0 25px rgba(0, 102, 255, 0.4);
+}
+
+
+.card h3 {
+    color: #00e5ff;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+.card p {
+    color: #c4d5df;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* checklist tick marks */
+
+.checklist {
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+
+.checklist h2 {
+    color: #00e5ff;
+    font-size: 35px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+
+.check {
+    padding: 25px;
+    margin-bottom: 20px;
+    text-align: left;
+    background: rgba(8, 20, 35, 0.90);
+    border-left: 3px solid #00e5ff;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+
+.check:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+
+.check h3 {
+    color: #00e5ff;
+    margin-bottom: 10px;
+}
+
+
+.check p {
+    color: #c4d5df;
+    line-height: 1.6;
+}
+
+
+/* bottom section */
+
+.bottom {
+    width: 80%;
+    margin: 100px auto;
+    padding: 45px;
+    text-align: center;
+    background: rgba(8, 20, 35, 0.90);
+    border: 1px solid #164b66;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+}
+
+
+.bottom h2 {
+    color: #00e5ff;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+
+.bottom p {
+    color: #c4d5df;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+
+/* heading animation */
+
+@keyframes heading {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* content animation */
+
+@keyframes slide {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* cards animation */
+
+@keyframes cardshow {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* responsive design */
+
+@media screen and (max-width: 768px) {
+
+
+    h1 {
+        font-size: 30px;
+        margin-top: 60px;
+    }
+
+
+    nav {
+        top: 10px;
+        left: 5%;
+        width: 90%;
+    }
+
+
+    ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+
+    li {
+        margin: 5px;
+        padding: 5px;
+    }
+
+
+    li a {
+        font-size: 14px;
+    }
+
+
+    .content {
+        width: 100%;
+        padding-top: 100px;
+    }
+
+
+    .content h2 {
+        font-size: 28px;
+    }
+
+
+    .content p {
+        font-size: 16px;
+    }
+
+
+    /* mobile cards */
+
+    .tips {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    /* checklist */
+
+    .checklist {
+        width: 90%;
+        margin: 70px auto;
+    }
+
+
+    .checklist h2 {
+        font-size: 28px;
+    }
+
+
+    /* bottom */
+
+    .bottom {
+        width: 90%;
+        padding: 30px;
+        margin: 70px auto;
+    }
+
+
+    .bottom h2 {
+        font-size: 26px;
+    }
+
+}
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="d1">
+
+
+        <h1>Security Tips</h1>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="threats.html">Threats</a>
+                </li>
+
+                <li>
+                    <a href="tips.html">Security Tips</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- introduction -->
+
+        <div class="content">
+
+            <h2>Protect Yourself Online</h2>
+
+            <p>
+                Cybersecurity is not only about using advanced
+                security software. Simple and careful online
+                habits can help protect your personal information,
+                accounts and devices from cyber threats.
+            </p>
+
+        </div>
+
+
+        <!-- security tips -->
+
+        <div class="tips">
+
+
+            <div class="card">
+
+                <h3>Use Strong Passwords</h3>
+
+                <p>
+                    Create strong and unique passwords for every
+                    online account. A good password should contain
+                    uppercase letters, lowercase letters, numbers
+                    and special characters.
+                </p>
+
+                <p>
+                    Avoid using your name, date of birth, phone
+                    number or simple words as passwords.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3> Use Two-Factor Authentication</h3>
+
+                <p>
+                    Two-factor authentication adds another layer
+                    of security to your online accounts.
+                </p>
+
+                <p>
+                    Even if someone knows your password, they may
+                    not be able to access your account without
+                    the second verification step.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3> Be Careful With Emails</h3>
+
+                <p>
+                    Do not immediately trust emails asking for
+                    passwords, bank information or other personal
+                    details.
+                </p>
+
+                <p>
+                    Check the sender's email address and look for
+                    suspicious links before clicking anything.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3> Browse Safely</h3>
+
+                <p>
+                    Avoid visiting suspicious websites or downloading
+                    files from unknown sources.
+                </p>
+
+                <p>
+                    Look for secure connections and make sure the
+                    website address is correct before entering
+                    sensitive information.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3> Secure Your Mobile</h3>
+
+                <p>
+                    Use a screen lock, fingerprint or face
+                    recognition to protect your smartphone.
+                </p>
+
+                <p>
+                    Install applications only from trusted sources
+                    and remove applications that you no longer use.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3> Keep Software Updated</h3>
+
+                <p>
+                    Software updates often contain important
+                    security fixes and improvements.
+                </p>
+
+                <p>
+                    Keep your operating system, browser and
+                    applications updated to reduce security risks.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Backup Important Data</h3>
+
+                <p>
+                    Regular backups can help you recover important
+                    files if your device is damaged or affected
+                    by malware or ransomware.
+                </p>
+
+                <p>
+                    Keep important backups in a safe location.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Be Careful on Public Wi-Fi</h3>
+
+                <p>
+                    Public Wi-Fi networks may not always be secure.
+                    Avoid performing sensitive activities on
+                    unknown networks.
+                </p>
+
+                <p>
+                    Be especially careful when accessing banking
+                    or other important accounts.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- daily checklist -->
+
+        <div class="checklist">
+
+            <h2>Daily Security Checklist</h2>
+
+
+            <div class="check">
+
+                <h3>✓ Check Your Accounts</h3>
+
+                <p>
+                    Look for unusual login attempts or activities
+                    that you do not recognize.
+                </p>
+
+            </div>
+
+
+            <div class="check">
+
+                <h3>✓ Think Before You Click</h3>
+
+                <p>
+                    Always check links, emails and attachments
+                    before opening them.
+                </p>
+
+            </div>
+
+
+            <div class="check">
+
+                <h3>✓ Protect Your Personal Information</h3>
+
+                <p>
+                    Do not share passwords, OTPs or sensitive
+                    information with unknown people.
+                </p>
+
+            </div>
+
+
+            <div class="check">
+
+                <h3>✓ Lock Your Devices</h3>
+
+                <p>
+                    Always lock your computer and smartphone
+                    when you are not using them.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- conclusion -->
+
+        <div class="bottom">
+
+            <h2>Think Before You Click</h2>
+
+            <p>
+                Cybersecurity starts with awareness. By following
+                simple security practices every day, you can
+                significantly reduce the chances of becoming a
+                victim of cyber attacks.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
